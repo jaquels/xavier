@@ -1,0 +1,349 @@
+<div id="side-panel">
+
+        <div id="side-panel-trigger-close" class="side-panel-trigger"><a href="#"><i class="icon-line-cross"></i></a></div>
+    
+        <div class="side-panel-wrap">
+    
+            <div class="widget clearfix">
+    
+                <h4 class="t400">Login with Social Profiles</h4>
+    
+    
+                <a href="#" class="button button-rounded t400 btn-block center si-colored noleftmargin si-facebook">Facebook</a>
+                <a href="#" class="button button-rounded t400 btn-block center si-colored noleftmargin si-gplus">Google</a>
+    
+                <div class="line"></div>
+    
+                <h4 class="t400">Existing Account?</h4>
+    
+                <form id="login-form" name="login-form" class="nobottommargin" action="#" method="post">
+    
+                    <div class="col_full">
+                        <label for="login-form-username" class="t400">Username:</label>
+                        <input type="text" id="login-form-username" name="login-form-username" value="" class="form-control" />
+                    </div>
+    
+                    <div class="col_full">
+                        <label for="login-form-password" class="t400">Password:</label>
+                        <input type="password" id="login-form-password" name="login-form-password" value="" class="form-control" />
+                    </div>
+    
+                    <div class="col_full nobottommargin">
+                        <button class="button button-rounded t400 nomargin" id="login-form-submit" name="login-form-submit" value="login">Login</button>
+                        <a href="#" class="fright">Forgot Password?</a>
+                    </div>
+    
+                </form>
+    
+    
+            </div>
+    
+        </div>
+    
+    </div>
+    
+    <!-- Document Wrapper
+    ============================================= -->
+    
+    
+        <!-- Top Bar
+                        ============================================= -->
+        <div id="top-bar" class="transparent-topbar">
+    
+            <div class="container clearfix">
+    
+                <div class="col_half fright col_last clearfix nobottommargin">
+    
+                    <!-- Top Links
+                                    ============================================= -->
+                    <div class="top-links">
+                        <ul>
+                            <li class="d-md-none d-lg-block"><div class="wa-chat-wrapper wa-chat-right ng-scope"><a href="https://api.whatsapp.com/send?phone=555199741-4080&text=Ol%C3%A1,%20tudo%20bem?%20Tenho%20algumas%20dúvidas,%20voc%C3%AA%20poderia%20me%20ajudar?"><div class="wa-chat-header" style="background: #57bb63"><span class="wa-chat-icon"><i class="i-plain3 fab fa-whatsapp nomargin">::before</i></span></div></a></li></div>
+                            <li><a href="tel:+555131074080"><i class="icon-building1"></i>(51) 3107-4080</a></li>
+                            <li class="top-bar-highlight"><a href="#">Construa seu imóvel</a>
+                                <div class="top-link-section" style="font-size: 14px;">
+                                    Taxas mais baixas no mercado. <a href="#" class="more-link font-secondary"
+                                        style="border-bottom-style: dotted;">Conheça &rarr;</a>
+                                </div>
+                            </li>
+                            <li><a href="#" class="side-panel-trigger">Login/Cadastrar</a></li>
+                        </ul>
+                    </div><!-- .top-links end -->
+                    
+                </div>
+    
+            </div>
+    
+        </div><!-- #top-bar end -->
+    
+        <!-- Header
+                ============================================= -->
+        <header id="header" class="static-sticky transparent-header dark">
+    
+            <div id="header-wrap">
+    
+                <div class="container clearfix">
+    
+                    <div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
+    
+                    <!-- Logo
+                            ============================================= -->
+                    <div id="logo">
+                        <a href="index.html">
+                            <img src="images/logo.svg" width="200" alt="Canvas Logo"></a>
+                    </div><!-- #logo end -->
+    
+                    <!-- Primary Navigation
+                            ============================================= -->
+                    <nav id="primary-menu" class="with-arrows">
+    
+                        <ul>
+                            <li><a href="#/">
+                                    <div>Home</div>
+                                </a></li>
+                            <li><a href="#/corretores">
+                                    <div>Corretores</div>
+                                </a></li>
+                            <li><a href="#">
+                                    <div>Serviços</div>
+                                </a>
+                                <ul>
+                                    <li><a href="#/resultadopesquisa">
+                                            <div>Compre um imóvel</div>
+                                        </a></li>
+                                    <li><a href="#/imovel">
+                                            <div>Venda seu imóvel</div>
+                                        </a></li>
+                                    <li><a href="#/construtora">
+                                            <div>Construtora</div>
+                                        </a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#/contato">
+                                    <div>Fale conosco</div>
+                                </a></li>
+    
+                        </ul>
+    
+                    </nav><!-- #primary-menu end -->
+    
+                </div>
+    
+            </div>
+    
+        </header><!-- #header end -->
+
+        
+<script>
+
+        jQuery(document).ready(function(){
+    
+            $(".price-range-slider").ionRangeSlider({
+                type: "double",
+                prefix: "$",
+                min: 200,
+                max: 10000,
+                max_postfix: "+"
+            });
+    
+            $(".area-range-slider").ionRangeSlider({
+                type: "double",
+                min: 50,
+                max: 20000,
+                from: 50,
+                to: 20000,
+                postfix: " sqm.",
+                max_postfix: "+"
+            });
+    
+            jQuery(".bt-switch").bootstrapSwitch();
+    
+        });
+    
+        jQuery(window).on( 'load', function(){
+    
+            // Google Map
+            jQuery('#headquarters-map').gMap({
+                address: 'New York, USA',
+                maptype: 'ROADMAP',
+                zoom: 13,
+                markers: [
+                    {
+                        address: "New York, USA",
+                        html: "New York, USA",
+                        icon: {
+                            image: "images/icons/map-icon-red.png",
+                            iconsize: [32, 36],
+                            iconanchor: [14,44]
+                        }
+                    }
+                ],
+                doubleclickzoom: false,
+                controls: {
+                    panControl: false,
+                    zoomControl: false,
+                    mapTypeControl: false,
+                    scaleControl: false,
+                    streetViewControl: false,
+                    overviewMapControl: false
+                },
+                styles: [{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"color":"#F0AD4E"},{"lightness":60}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#2C3E50"},{"visibility":"on"}]}]
+            });
+    
+        });
+    
+    </script>
+    
+    <script type="text/javascript">
+    
+        jQuery(document).ready(function () {
+    
+            $(".price-range-slider").ionRangeSlider({
+                type: "double",
+                prefix: "$",
+                min: 200,
+                max: 10000,
+                max_postfix: "+"
+            });
+    
+            $(".area-range-slider").ionRangeSlider({
+                type: "double",
+                min: 50,
+                max: 20000,
+                from: 50,
+                to: 20000,
+                postfix: " sqm.",
+                max_postfix: "+"
+            });
+    
+            jQuery(".bt-switch").bootstrapSwitch();
+    
+            jQuery('.more-search').click(function () {
+                jQuery('.expand-link').slideToggle(400);
+            });
+    
+        });
+    
+    
+    </script>
+    
+    <script>
+    
+        jQuery(document).ready(function ($) {
+            var newDate = new Date(2019, 9, 31);
+            $('#countdown-ex1').countdown({ until: newDate });
+            $('#countdown-ex2').countdown({ until: newDate });
+            $('#countdown-ex3').countdown({ until: newDate });
+    
+            var newDate4 = new Date(2019, 9, 31);
+            $('#countdown-ex4').countdown({ until: newDate4 });
+    
+            $('#start-downloadbtn').click(function () {
+                $('#start-downloadbtn').fadeOut(300, function () {
+                    $('#start-download').fadeIn(300, function () {
+                        var currentDate = new Date();
+                        currentDate.setSeconds(currentDate.getSeconds() + 10);
+                        $('#countdown-ex5').countdown({
+                            until: currentDate,
+                            format: 'S',
+                            expiryUrl: 'http://themeforest.net/user/SemiColonWeb',
+                            onExpiry: function () {
+                                $('#start-download').html('Your Download should start automatically. If it dosen\'t, <a href="#" class="alert-link">click here</a>.');
+                            }
+                        });
+                    });
+                });
+                return false;
+            });
+        });
+    
+    </script>
+    
+    <script>
+    
+        var tpj = jQuery;
+        var revapi31;
+        tpj(document).ready(function () {
+            if (tpj("#rev_slider_679_1").revolution == undefined) {
+                revslider_showDoubleJqueryError("#rev_slider_679_1");
+            } else {
+                revapi31 = tpj("#rev_slider_679_1").show().revolution({
+                    sliderType: "standard",
+                    jsFileLocation: "include/rs-plugin/js/",
+                    sliderLayout: "fullwidth",
+                    dottedOverlay: "none",
+                    delay: 16000,
+                    hideThumbs: 200,
+                    thumbWidth: 100,
+                    thumbHeight: 50,
+                    thumbAmount: 5,
+                    navigation: {
+                        keyboardNavigation: "on",
+                        keyboard_direction: "horizontal",
+                        mouseScrollNavigation: "off",
+                        onHoverStop: "off",
+                        touch: {
+                            touchenabled: "on",
+                            swipe_threshold: 75,
+                            swipe_min_touches: 1,
+                            swipe_direction: "horizontal",
+                            drag_block_vertical: false
+                        },
+                        arrows: {
+                            style: "hades",
+                            enable: true,
+                            hide_onmobile: false,
+                            hide_onleave: false,
+                            tmp: '<div class="tp-arr-allwrapper">	<div class="tp-arr-imgholder"></div></div>',
+                            left: {
+                                h_align: "left",
+                                v_align: "center",
+                                h_offset: 10,
+                                v_offset: 0
+                            },
+                            right: {
+                                h_align: "right",
+                                v_align: "center",
+                                h_offset: 10,
+                                v_offset: 0
+                            }
+                        },
+                    },
+                    responsiveLevels: [1140, 1024, 778, 480],
+                    visibilityLevels: [1140, 1024, 778, 480],
+                    gridwidth: [1140, 1024, 778, 480],
+                    gridheight: [700, 768, 960, 720],
+                    lazyType: "none",
+                    shadow: 0,
+                    spinner: "off",
+                    stopLoop: "off",
+                    stopAfterLoops: -1,
+                    stopAtSlide: -1,
+                    shuffle: "off",
+                    autoHeight: "off",
+                    fullScreenAutoWidth: "off",
+                    fullScreenAlignForce: "off",
+                    fullScreenOffsetContainer: "",
+                    fullScreenOffset: "0px",
+                    hideThumbsOnMobile: "off",
+                    hideSliderAtLimit: 0,
+                    hideCaptionAtLimit: 0,
+                    hideAllCaptionAtLilmit: 0,
+                    debugMode: false,
+                    fallbacks: {
+                        simplifyAll: "off",
+                        nextSlideOnWindowFocus: "off",
+                        disableFocusListener: false,
+                    }
+                });
+            }
+    
+            revapi31.bind("revolution.slide.onloaded", function (e) {
+                setTimeout(function () { SEMICOLON.slider.sliderParallaxDimensions(); }, 200);
+            });
+    
+            revapi31.bind("revolution.slide.onchange", function (e, data) {
+                SEMICOLON.slider.revolutionSliderMenu();
+            });
+        });	/*ready*/
+    </script>
